@@ -15,12 +15,12 @@ class MonitorFragment : Fragment() {
     private lateinit var monitorViewModel: MonitorViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         monitorViewModel =
-                ViewModelProviders.of(this).get(MonitorViewModel::class.java)
+            ViewModelProviders.of(this).get(MonitorViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_monitor, container, false)
         val textView: TextView = root.findViewById(R.id.text_monitor)
         monitorViewModel.text.observe(viewLifecycleOwner, Observer {
